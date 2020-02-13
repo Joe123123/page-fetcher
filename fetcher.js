@@ -2,11 +2,6 @@ const request = require("request");
 const fs = require("fs");
 const readline = require("readline");
 const fetch = (url, filePath) => {
-  // let regex = /(\.\w+)$/;
-  // if (!regex.test(filePath)) {
-  //   console.log("wrong file path");
-  //   return;
-  // }
   const requestAndWrite = function(url, filePath) {
     request(url, (err, response, body) => {
       if (err) throw err;
